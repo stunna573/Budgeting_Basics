@@ -1,0 +1,3116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="BudgetBasics personal financial learning and budgeting workspace.">
+
+    <meta name="theme-color" content="#FFF9F0">
+
+    <title>BudgetBasics — My Money Space</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         APP SHELL
+    ====================================================== -->
+
+    <div class="app-shell">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-top">
+
+                <a href="index.html" class="app-brand">
+
+                    <div class="app-logo">
+                        B
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            BudgetBasics
+                        </strong>
+
+                        <span>
+                            My money space
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <button class="sidebar-close" id="sidebarClose" type="button" aria-label="Close navigation">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="workspace-label">
+
+                <span>
+                    WORKSPACE
+                </span>
+
+                <button id="workspaceSwitcher" type="button">
+
+                    <span id="workspaceMonthLabel">
+                        September 2026
+                    </span>
+
+                    <span>
+                       ⌄
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <nav class="app-nav" aria-label="Application navigation">
+
+                <button class="app-nav-link active" data-section="home" type="button">
+
+                    <span class="nav-icon">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Home
+                    </span>
+
+                </button>
+
+
+                <button class="app-nav-link" data-section="plan" type="button">
+
+                    <span class="nav-icon">
+                        ≋
+                    </span>
+
+                    <span>
+                        Plan my month
+                    </span>
+
+                </button>
+
+
+                <button class="app-nav-link" data-section="spending" type="button">
+
+                    <span class="nav-icon">
+                        ◌
+                    </span>
+
+                    <span>
+                        Spending
+                    </span>
+
+                </button>
+
+
+                <button class="app-nav-link" data-section="goals" type="button">
+
+                    <span class="nav-icon">
+                        ↗
+                    </span>
+
+                    <span>
+                        Savings goals
+                    </span>
+
+                </button>
+
+
+                <div class="nav-divider"></div>
+
+
+                <p class="nav-group-label">
+                    LEARN & PRACTICE
+                </p>
+
+
+                <button class="app-nav-link" data-section="learn" type="button">
+
+                    <span class="nav-icon">
+                        ✦
+                    </span>
+
+                    <span>
+                        Learning Center
+                    </span>
+
+                </button>
+
+
+                <button class="app-nav-link" data-section="challenge" type="button">
+
+                    <span class="nav-icon">
+                        ◎
+                    </span>
+
+                    <span>
+                        Money Mission
+                    </span>
+
+                </button>
+
+
+                <button class="app-nav-link" data-section="insights" type="button">
+
+                    <span class="nav-icon">
+                        ◒
+                    </span>
+
+                    <span>
+                        Insights
+                    </span>
+
+                </button>
+
+
+                <div class="nav-divider"></div>
+
+
+                <button class="app-nav-link" data-section="review" type="button">
+
+                    <span class="nav-icon">
+                        ✓
+                    </span>
+
+                    <span>
+                        Monthly Review
+                    </span>
+
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-help">
+
+                    <span class="help-icon">
+                        ?
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Need help?
+                        </strong>
+
+                        <span>
+                            Ask BudgetBee
+                        </span>
+
+                    </div>
+
+                    <button id="sidebarBeeButton" type="button" aria-label="Open BudgetBee">
+                        →
+                    </button>
+
+                </div>
+
+
+                <button class="sidebar-profile" id="profileButton" type="button">
+
+                    <span
+                        class="profile-avatar"
+                        id="sidebarAvatar"
+                    >
+                        V
+                    </span>
+
+                    <span>
+
+                        <strong id="sidebarUserName">
+                            User
+                        </strong>
+
+                        <small>
+                            My account
+                        </small>
+
+                    </span>
+
+                    <span class="profile-arrow">
+                        ⋯
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MOBILE OVERLAY
+        ================================================== -->
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <div class="app-main">
+
+
+            <!-- =================================================
+                 TOP BAR
+            ================================================== -->
+
+            <header class="app-header">
+
+                <div class="app-header-left">
+
+                    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation">
+                        ☰
+                    </button>
+
+
+                    <div class="page-context">
+
+                        <span id="currentDate">
+                            September 27, 2026
+                        </span>
+
+                        <strong id="currentPageTitle">
+                            My money
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="app-header-right">
+
+                    <button class="header-icon-button" id="globalSearchButton" type="button" aria-label="Search BudgetBasics">
+                        ⌕
+                    </button>
+
+
+                    <button class="header-icon-button" id="themeToggle" type="button" aria-label="Toggle theme">
+                        <span id="themeIcon">
+                            ☼
+                        </span>
+                    </button>
+
+
+                    <button class="header-avatar" id="headerAvatar" type="button" aria-label="Open profile">
+                        V
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTENT
+            ================================================== -->
+
+            <main class="app-content">
+
+
+                <!-- =============================================
+                     HOME SECTION
+                ============================================== -->
+
+                <section class="app-section active" id="section-home">
+
+
+                    <div class="home-hero">
+
+                        <div>
+
+                            <span class="section-eyebrow">
+                                YOUR MONTHLY SPACE
+                            </span>
+
+                            <h1>
+                                Good morning,
+                                <span id="heroUserName">
+                                    Valentine
+                                </span>.
+                            </h1>
+
+                            <p>
+                                Here's where your money stands and what you can focus on next.
+                            </p>
+
+                        </div>
+
+
+                        <div class="home-date-card">
+
+                            <span>
+                                TODAY
+                            </span>
+
+                            <strong id="heroDate">
+                                27
+                            </strong>
+
+                            <small id="heroMonth">
+                                September
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NEXT STEP -->
+
+                    <div class="next-step-card">
+
+                        <div class="next-step-icon">
+                            ✦
+                        </div>
+
+                        <div class="next-step-copy">
+
+                            <span>
+                                YOUR NEXT STEP
+                            </span>
+
+                            <strong id="nextStepTitle">
+                                Give your income a purpose.
+                            </strong>
+
+                            <p id="nextStepText">
+                                Add your monthly income to start building your September plan.
+                            </p>
+
+                        </div>
+
+                        <button class="primary-action" id="nextStepButton" type="button">
+                            Start now →
+                        </button>
+
+                    </div>
+
+
+                    <!-- MONEY OVERVIEW -->
+
+                    <div class="section-title-row">
+
+                        <div>
+
+                            <span>
+                                MONEY OVERVIEW
+                            </span>
+
+                            <h2>
+                                This month
+                            </h2>
+
+                        </div>
+
+                        <button class="link-button" data-section-target="review" type="button">
+                            View review →
+                        </button>
+
+                    </div>
+
+
+                    <div class="overview-grid">
+
+                        <article class="overview-card income-card">
+
+                            <div class="overview-card-top">
+
+                                <span>
+                                    Income
+                                </span>
+
+                                <div class="overview-icon blue">
+                                    ↑
+                                </div>
+
+                            </div>
+
+                            <strong id="overviewIncome">
+                                ₦0
+                            </strong>
+
+                            <small>
+                                Money available this month
+                            </small>
+
+                        </article>
+
+
+                        <article class="overview-card spending-card">
+
+                            <div class="overview-card-top">
+
+                                <span>
+                                    Spent
+                                </span>
+
+                                <div class="overview-icon coral">
+                                    ↓
+                                </div>
+
+                            </div>
+
+                            <strong id="overviewSpent">
+                                ₦0
+                            </strong>
+
+                            <small id="overviewSpentText">
+                                Add expenses to see your spending.
+                            </small>
+
+                        </article>
+
+
+                        <article class="overview-card savings-card">
+
+                            <div class="overview-card-top">
+
+                                <span>
+                                    Saved
+                                </span>
+
+                                <div class="overview-icon mint">
+                                    ↗
+                                </div>
+
+                            </div>
+
+                            <strong id="overviewSaved">
+                                ₦0
+                            </strong>
+
+                            <small>
+                                Planned or recorded savings
+                            </small>
+
+                        </article>
+
+
+                        <article class="overview-card remaining-card">
+
+                            <div class="overview-card-top">
+
+                                <span>
+                                    Remaining
+                                </span>
+
+                                <div class="overview-icon yellow">
+                                    =
+                                </div>
+
+                            </div>
+
+                            <strong id="overviewRemaining">
+                                ₦0
+                            </strong>
+
+                            <small>
+                                Income minus spending
+                            </small>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- MAIN DASHBOARD GRID -->
+
+                    <div class="dashboard-grid">
+
+
+                        <!-- BUDGET HEALTH -->
+
+                        <article class="dashboard-card budget-health-card">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        BUDGET HEALTH
+                                    </span>
+
+                                    <h3>
+                                        Your month at a glance
+                                    </h3>
+
+                                </div>
+
+                                <button class="card-more" type="button">
+                                    •••
+                                </button>
+
+                            </div>
+
+
+                            <div class="health-content">
+
+                                <div class="health-ring">
+
+                                    <div>
+
+                                        <strong id="healthPercent">
+                                            0%
+                                        </strong>
+
+                                        <span>
+                                            planned
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="health-details">
+
+                                    <div class="health-status">
+
+                                        <span class="status-dot" id="healthStatusDot"></span>
+
+                                        <strong id="healthStatus">
+                                            Add your income
+                                        </strong>
+
+                                    </div>
+
+                                    <p id="healthMessage">
+                                        Once you add income and spending, BudgetBasics will help you understand your month.
+                                    </p>
+
+
+                                    <div class="health-breakdown">
+
+                                        <div>
+
+                                            <span>
+                                                Needs
+                                            </span>
+
+                                            <strong id="healthNeeds">
+                                                0%
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <span>
+                                                Wants
+                                            </span>
+
+                                            <strong id="healthWants">
+                                                0%
+                                            </strong>
+
+                                        </div>
+
+                                        <div>
+
+                                            <span>
+                                                Savings
+                                            </span>
+
+                                            <strong id="healthSavings">
+                                                0%
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- QUICK ACTIONS -->
+
+                        <article class="dashboard-card quick-actions-card">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        QUICK ACTIONS
+                                    </span>
+
+                                    <h3>
+                                        What do you want to do?
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="quick-actions">
+
+                                <button class="quick-action" data-action="income" type="button">
+
+                                    <span class="quick-icon blue">
+                                        ↑
+                                    </span>
+
+                                    <span>
+                                        Add income
+                                    </span>
+
+                                    <strong>
+                                        +
+                                    </strong>
+
+                                </button>
+
+
+                                <button class="quick-action" data-action="expense" type="button">
+
+                                    <span class="quick-icon coral">
+                                        ↓
+                                    </span>
+
+                                    <span>
+                                        Add expense
+                                    </span>
+
+                                    <strong>
+                                        +
+                                    </strong>
+
+                                </button>
+
+
+                                <button class="quick-action" data-action="goal" type="button">
+
+                                    <span class="quick-icon mint">
+                                        ↗
+                                    </span>
+
+                                    <span>
+                                        Set a goal
+                                    </span>
+
+                                    <strong>
+                                        +
+                                    </strong>
+
+                                </button>
+
+
+                                <button class="quick-action" data-action="learn" type="button">
+
+                                    <span class="quick-icon yellow">
+                                        ✦
+                                    </span>
+
+                                    <span>
+                                        Learn something
+                                    </span>
+
+                                    <strong>
+                                        →
+                                    </strong>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- PLAN + GOAL -->
+
+                    <div class="dashboard-grid second-grid">
+
+
+                        <!-- 50/30/20 -->
+
+                        <article class="dashboard-card plan-preview-card">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        BUDGET FRAMEWORK
+                                    </span>
+
+                                    <h3>
+                                        50 / 30 / 20
+                                    </h3>
+
+                                </div>
+
+                                <button class="small-action" data-section-target="plan" type="button">
+                                    Open planner
+                                </button>
+
+                            </div>
+
+
+                            <p class="card-description">
+                                Use this as a starting framework for thinking about needs, wants and savings.
+                            </p>
+
+
+                            <div class="budget-bars">
+
+                                <div class="budget-bar-item">
+
+                                    <div>
+
+                                        <span>
+                                            Needs
+                                        </span>
+
+                                        <strong>
+                                            50%
+                                        </strong>
+
+                                    </div>
+
+                                    <div class="budget-track">
+                                        <span class="needs-bar" id="needsBar"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="budget-bar-item">
+
+                                    <div>
+
+                                        <span>
+                                            Wants
+                                        </span>
+
+                                        <strong>
+                                            30%
+                                        </strong>
+
+                                    </div>
+
+                                    <div class="budget-track">
+                                        <span class="wants-bar" id="wantsBar"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="budget-bar-item">
+
+                                    <div>
+
+                                        <span>
+                                            Savings
+                                        </span>
+
+                                        <strong>
+                                            20%
+                                        </strong>
+
+                                    </div>
+
+                                    <div class="budget-track">
+                                        <span class="savings-bar" id="savingsBar"></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SAVINGS GOAL -->
+
+                        <article class="dashboard-card goal-preview-card">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        SAVINGS GOAL
+                                    </span>
+
+                                    <h3 id="homeGoalName">
+                                        No goal yet
+                                    </h3>
+
+                                </div>
+
+                                <button class="small-action" data-section-target="goals" type="button">
+                                    View
+                                </button>
+
+                            </div>
+
+
+                            <div class="goal-empty" id="homeGoalEmpty">
+
+                                <div class="empty-goal-icon">
+                                    ↗
+                                </div>
+
+                                <p>
+                                    Give your savings a purpose.
+                                </p>
+
+                                <button class="primary-action small" data-action="goal" type="button">
+                                    Create a goal
+                                </button>
+
+                            </div>
+
+
+                            <div class="home-goal-content hidden" id="homeGoalContent">
+
+                                <div class="goal-value-row">
+
+                                    <strong id="homeGoalCurrent">
+                                        ₦0
+                                    </strong>
+
+                                    <span id="homeGoalTarget">
+                                        of ₦0
+                                    </span>
+
+                                </div>
+
+                                <div class="large-progress">
+
+                                    <span id="homeGoalProgress"></span>
+
+                                </div>
+
+                                <div class="goal-meta">
+
+                                    <span id="homeGoalRemaining">
+                                        ₦0 remaining
+                                    </span>
+
+                                    <span id="homeGoalMonths">
+                                        —
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- LOWER HOME GRID -->
+
+                    <div class="dashboard-grid third-grid">
+
+
+                        <!-- SPENDING INSIGHT -->
+
+                        <article class="dashboard-card insight-card">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        SPENDING INSIGHT
+                                    </span>
+
+                                    <h3>
+                                        Where your money is going
+                                    </h3>
+
+                                </div>
+
+                                <button class="small-action" data-section-target="spending" type="button">
+                                    View all
+                                </button>
+
+                            </div>
+
+
+                            <div class="category-list" id="homeCategoryList">
+
+                                <div class="empty-state-small">
+                                    Add expenses to see your categories.
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- BUDGETBEE INSIGHT -->
+
+                        <article class="dashboard-card bee-insight-card">
+
+                            <div class="bee-insight-top">
+
+                                <div class="ai-avatar">
+                                    AI
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        BUDGETBEE
+                                    </span>
+
+                                    <h3>
+                                        Your money guide
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="bee-message">
+
+                                <p id="homeBeeMessage">
+                                    Welcome to your BudgetBasics space. Add your first number and I'll help you decide what to look at next.
+                                </p>
+
+                            </div>
+
+
+                            <button class="bee-open-button" id="homeBeeButton" type="button">
+                                Ask BudgetBee →
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- LEARNING + CHALLENGE -->
+
+                    <div class="section-title-row home-section-title">
+
+                        <div>
+
+                            <span>
+                                LEARN & PRACTICE
+                            </span>
+
+                            <h2>
+                                Build knowledge through action
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-home-grid">
+
+
+                        <article class="learning-home-card">
+
+                            <div class="learning-card-icon blue">
+                                ✦
+                            </div>
+
+                            <span class="learning-level">
+                                LESSON 01
+                            </span>
+
+                            <h3>
+                                Budgeting basics
+                            </h3>
+
+                            <p>
+                                Understand income, expenses, needs, wants and savings.
+                            </p>
+
+                            <div class="learning-card-bottom">
+
+                                <span>
+                                    5 min
+                                </span>
+
+                                <button data-section-target="learn" type="button">
+                                    Start →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="learning-home-card">
+
+                            <div class="learning-card-icon coral">
+                                ◇
+                            </div>
+
+                            <span class="learning-level">
+                                PRACTICE
+                            </span>
+
+                            <h3>
+                                Needs vs wants
+                            </h3>
+
+                            <p>
+                                Test how you would classify everyday purchases.
+                            </p>
+
+                            <div class="learning-card-bottom">
+
+                                <span>
+                                    3 min
+                                </span>
+
+                                <button data-section-target="learn" type="button">
+                                    Try it →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="learning-home-card challenge-home-card">
+
+                            <div class="challenge-top">
+
+                                <div class="learning-card-icon lavender">
+                                    ◎
+                                </div>
+
+                                <span class="learning-level">
+                                    GAME
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Money Mission
+                            </h3>
+
+                            <p>
+                                Make choices inside a fictional monthly budget and learn from the consequences.
+                            </p>
+
+                            <div class="learning-card-bottom">
+
+                                <span>
+                                    10 min
+                                </span>
+
+                                <button data-section-target="challenge" type="button">
+                                    Play →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =============================================
+                     PLAN SECTION
+                ============================================== -->
+
+                <section class="app-section" id="section-plan">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <span>
+                                PLAN
+                            </span>
+
+                            <h1>
+                                Give your money a job.
+                            </h1>
+
+                            <p>
+                                Start with a simple framework, then adjust it to your real life.
+                            </p>
+
+                        </div>
+
+                        <button class="primary-action" data-action="income" type="button">
+                            Add income →
+                        </button>
+
+                    </div>
+
+
+                    <div class="planner-layout">
+
+
+                        <div class="planner-main">
+
+
+                            <article class="dashboard-card planner-income-card">
+
+                                <div class="card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            MONTHLY INCOME
+                                        </span>
+
+                                        <h3>
+                                            How much are you planning with?
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="overview-icon blue">
+                                        ₦
+                                    </div>
+
+                                </div>
+
+
+                                <div class="income-input-row">
+
+                                    <span>
+                                        ₦
+                                    </span>
+
+                                    <input id="incomeInput" type="number" min="0" step="100" placeholder="0">
+
+                                    <button id="saveIncomeButton" type="button">
+                                        Save
+                                    </button>
+
+                                </div>
+
+
+                                <p class="input-help">
+                                    This is a planning number. It does not connect to a bank account.
+                                </p>
+
+                            </article>
+
+
+                            <article class="dashboard-card">
+
+                                <div class="card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            PLANNING FRAMEWORK
+                                        </span>
+
+                                        <h3>
+                                            50 / 30 / 20 calculator
+                                        </h3>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="calculator-result">
+
+                                    <div class="calculator-income">
+
+                                        <span>
+                                            Monthly income
+                                        </span>
+
+                                        <strong id="plannerIncome">
+                                            ₦0
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="calculator-grid">
+
+                                        <div class="calculator-box needs-box">
+
+                                            <span>
+                                                50%
+                                            </span>
+
+                                            <strong id="plannerNeeds">
+                                                ₦0
+                                            </strong>
+
+                                            <small>
+                                                Needs
+                                            </small>
+
+                                        </div>
+
+
+                                        <div class="calculator-box wants-box">
+
+                                            <span>
+                                                30%
+                                            </span>
+
+                                            <strong id="plannerWants">
+                                                ₦0
+                                            </strong>
+
+                                            <small>
+                                                Wants
+                                            </small>
+
+                                        </div>
+
+
+                                        <div class="calculator-box savings-box">
+
+                                            <span>
+                                                20%
+                                            </span>
+
+                                            <strong id="plannerSavings">
+                                                ₦0
+                                            </strong>
+
+                                            <small>
+                                                Savings
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="dashboard-card">
+
+                                <div class="card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            CATEGORY GUIDE
+                                        </span>
+
+                                        <h3>
+                                            Think before you spend
+                                        </h3>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="category-guide">
+
+                                    <div>
+
+                                        <div class="guide-icon blue">
+                                            N
+                                        </div>
+
+                                        <strong>
+                                            Needs
+                                        </strong>
+
+                                        <p>
+                                            Essentials that support daily life, such as food, housing, transport or required bills.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <div class="guide-icon coral">
+                                            W
+                                        </div>
+
+                                        <strong>
+                                            Wants
+                                        </strong>
+
+                                        <p>
+                                            Purchases that improve enjoyment but are usually flexible.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <div class="guide-icon mint">
+                                            S
+                                        </div>
+
+                                        <strong>
+                                            Savings
+                                        </strong>
+
+                                        <p>
+                                            Money you intentionally keep for future needs and goals.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <aside class="planner-side">
+
+                            <article class="dashboard-card side-tip-card">
+
+                                <div class="ai-avatar">
+                                    AI
+                                </div>
+
+                                <span>
+                                    BUDGETBEE TIP
+                                </span>
+
+                                <h3>
+                                    A framework is a starting point, not a rule you must force yourself into.
+                                </h3>
+
+                                <p>
+                                    Your real income, responsibilities and goals matter.
+                                </p>
+
+                            </article>
+
+
+                            <article class="dashboard-card mini-summary-card">
+
+                                <span>
+                                    YOUR PLAN
+                                </span>
+
+                                <div class="mini-summary-row">
+
+                                    <span>
+                                        Needs
+                                    </span>
+
+                                    <strong id="sideNeeds">
+                                        ₦0
+                                    </strong>
+
+                                </div>
+
+                                <div class="mini-summary-row">
+
+                                    <span>
+                                        Wants
+                                    </span>
+
+                                    <strong id="sideWants">
+                                        ₦0
+                                    </strong>
+
+                                </div>
+
+                                <div class="mini-summary-row">
+
+                                    <span>
+                                        Savings
+                                    </span>
+
+                                    <strong id="sideSavings">
+                                        ₦0
+                                    </strong>
+
+                                </div>
+
+                            </article>
+
+                        </aside>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     SPENDING SECTION
+                ============================================== -->
+
+                <section class="app-section" id="section-spending">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <span>
+                                SPENDING
+                            </span>
+
+                            <h1>
+                                See where your money goes.
+                            </h1>
+
+                            <p>
+                                Record expenses temporarily in this browser-based learning workspace.
+                            </p>
+
+                        </div>
+
+                        <button class="primary-action" data-action="expense" type="button">
+                            + Add expense
+                        </button>
+
+                    </div>
+
+
+                    <div class="spending-summary-grid">
+
+                        <div class="summary-number-card">
+
+                            <span>
+                                TOTAL SPENT
+                            </span>
+
+                            <strong id="spendingTotal">
+                                ₦0
+                            </strong>
+
+                            <small>
+                                This month
+                            </small>
+
+                        </div>
+
+
+                        <div class="summary-number-card">
+
+                            <span>
+                                TRANSACTIONS
+                            </span>
+
+                            <strong id="transactionCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Recorded expenses
+                            </small>
+
+                        </div>
+
+
+                        <div class="summary-number-card">
+
+                            <span>
+                                TOP CATEGORY
+                            </span>
+
+                            <strong id="topCategory" class="text-value">
+                                —
+                            </strong>
+
+                            <small>
+                                By spending
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <article class="dashboard-card expense-table-card">
+
+                        <div class="table-heading">
+
+                            <div>
+
+                                <span>
+                                    TRANSACTIONS
+                                </span>
+
+                                <h3>
+                                    This month's expenses
+                                </h3>
+
+                            </div>
+
+                            <div class="table-tools">
+
+                                <input id="expenseSearch" type="search" placeholder="Search expenses...">
+
+                                <select id="expenseFilter">
+
+                                    <option value="all">
+                                        All categories
+                                    </option>
+
+                                    <option value="needs">
+                                        Needs
+                                    </option>
+
+                                    <option value="wants">
+                                        Wants
+                                    </option>
+
+                                    <option value="savings">
+                                        Savings
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="expense-table-wrapper">
+
+                            <table class="expense-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>
+                                            Date
+                                        </th>
+
+                                        <th>
+                                            Description
+                                        </th>
+
+                                        <th>
+                                            Category
+                                        </th>
+
+                                        <th>
+                                            Amount
+                                        </th>
+
+                                        <th>
+                                            Action
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="expenseTableBody">
+
+                                    <tr>
+
+                                        <td colspan="5" class="table-empty">
+                                            No expenses yet. Add your first expense to start seeing patterns.
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =============================================
+                     GOALS SECTION
+                ============================================== -->
+
+                <section class="app-section" id="section-goals">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <span>
+                                SAVINGS
+                            </span>
+
+                            <h1>
+                                Give your savings a destination.
+                            </h1>
+
+                            <p>
+                                Set a target and understand the monthly contribution needed to reach it.
+                            </p>
+
+                        </div>
+
+                        <button class="primary-action" data-action="goal" type="button">
+                            + New goal
+                        </button>
+
+                    </div>
+
+
+                    <div class="goals-grid" id="goalsGrid">
+
+                        <div class="goal-empty-large">
+
+                            <div class="empty-goal-icon large">
+                                ↗
+                            </div>
+
+                            <h3>
+                                Your first goal starts here.
+                            </h3>
+
+                            <p>
+                                A laptop, emergency fund, school expense, trip or something meaningful to you.
+                            </p>
+
+                            <button class="primary-action" data-action="goal" type="button">
+                                Create savings goal →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-learning-card">
+
+                        <div>
+
+                            <span>
+                                WHY GOALS HELP
+                            </span>
+
+                            <h3>
+                                Saving becomes easier to understand when you know what you're saving for.
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            A goal gives you a target, a reason and a way to measure progress over time.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     LEARN SECTION
+                ============================================== -->
+
+                <section class="app-section" id="section-learn">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <span>
+                                LEARNING CENTER
+                            </span>
+
+                            <h1>
+                                Learn money by using it.
+                            </h1>
+
+                            <p>
+                                Short lessons followed by practical questions and decisions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="academy-progress-card">
+
+                        <div>
+
+                            <span>
+                                YOUR LEARNING PROGRESS
+                            </span>
+
+                            <h3>
+                                Financial Basics
+                            </h3>
+
+                        </div>
+
+                        <div class="academy-progress">
+
+                            <strong id="learningProgressText">
+                                0%
+                            </strong>
+
+                            <div>
+                                <span id="learningProgressBar"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="lesson-grid">
+
+                        <article class="lesson-card" data-lesson="budget">
+
+                            <div class="lesson-card-top">
+
+                                <span class="lesson-number">
+                                    01
+                                </span>
+
+                                <span class="lesson-time">
+                                    5 min
+                                </span>
+
+                            </div>
+
+                            <div class="lesson-icon blue">
+                                ≋
+                            </div>
+
+                            <span class="lesson-tag">
+                                FOUNDATIONS
+                            </span>
+
+                            <h3>
+                                Budgeting basics
+                            </h3>
+
+                            <p>
+                                Understand income, fixed expenses, variable expenses and savings.
+                            </p>
+
+                            <button class="lesson-start" data-lesson-start="budget" type="button">
+                                Start lesson →
+                            </button>
+
+                        </article>
+
+
+                        <article class="lesson-card" data-lesson="needs">
+
+                            <div class="lesson-card-top">
+
+                                <span class="lesson-number">
+                                    02
+                                </span>
+
+                                <span class="lesson-time">
+                                    4 min
+                                </span>
+
+                            </div>
+
+                            <div class="lesson-icon coral">
+                                ◇
+                            </div>
+
+                            <span class="lesson-tag">
+                                SPENDING
+                            </span>
+
+                            <h3>
+                                Needs vs wants
+                            </h3>
+
+                            <p>
+                                Practice separating essentials from flexible spending.
+                            </p>
+
+                            <button class="lesson-start" data-lesson-start="needs" type="button">
+                                Start lesson →
+                            </button>
+
+                        </article>
+
+
+                        <article class="lesson-card" data-lesson="rule">
+
+                            <div class="lesson-card-top">
+
+                                <span class="lesson-number">
+                                    03
+                                </span>
+
+                                <span class="lesson-time">
+                                    6 min
+                                </span>
+
+                            </div>
+
+                            <div class="lesson-icon yellow">
+                                %
+                            </div>
+
+                            <span class="lesson-tag">
+                                PLANNING
+                            </span>
+
+                            <h3>
+                                50 / 30 / 20
+                            </h3>
+
+                            <p>
+                                Explore one popular framework for dividing income.
+                            </p>
+
+                            <button class="lesson-start" data-lesson-start="rule" type="button">
+                                Start lesson →
+                            </button>
+
+                        </article>
+
+
+                        <article class="lesson-card" data-lesson="saving">
+
+                            <div class="lesson-card-top">
+
+                                <span class="lesson-number">
+                                    04
+                                </span>
+
+                                <span class="lesson-time">
+                                    5 min
+                                </span>
+
+                            </div>
+
+                            <div class="lesson-icon mint">
+                                ↗
+                            </div>
+
+                            <span class="lesson-tag">
+                                SAVING
+                            </span>
+
+                            <h3>
+                                Savings goals
+                            </h3>
+
+                            <p>
+                                Learn how a target and monthly contribution can turn a wish into a plan.
+                            </p>
+
+                            <button class="lesson-start" data-lesson-start="saving" type="button">
+                                Start lesson →
+                            </button>
+
+                        </article>
+
+
+                        <article class="lesson-card" data-lesson="mistakes">
+
+                            <div class="lesson-card-top">
+
+                                <span class="lesson-number">
+                                    05
+                                </span>
+
+                                <span class="lesson-time">
+                                    5 min
+                                </span>
+
+                            </div>
+
+                            <div class="lesson-icon lavender">
+                                !
+                            </div>
+
+                            <span class="lesson-tag">
+                                HABITS
+                            </span>
+
+                            <h3>
+                                Money mistakes
+                            </h3>
+
+                            <p>
+                                Explore common mistakes and the actions that can help prevent them.
+                            </p>
+
+                            <button class="lesson-start" data-lesson-start="mistakes" type="button">
+                                Start lesson →
+                            </button>
+
+                        </article>
+
+
+                        <article class="lesson-card" data-lesson="emergency">
+
+                            <div class="lesson-card-top">
+
+                                <span class="lesson-number">
+                                    06
+                                </span>
+
+                                <span class="lesson-time">
+                                    4 min
+                                </span>
+
+                            </div>
+
+                            <div class="lesson-icon blue">
+                                +
+                            </div>
+
+                            <span class="lesson-tag">
+                                PROTECTION
+                            </span>
+
+                            <h3>
+                                Emergency savings
+                            </h3>
+
+                            <p>
+                                Understand why unexpected expenses can change a monthly plan.
+                            </p>
+
+                            <button class="lesson-start" data-lesson-start="emergency" type="button">
+                                Start lesson →
+                            </button>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     CHALLENGE
+                ============================================== -->
+
+                <section class="app-section" id="section-challenge">
+
+                    <div class="challenge-page">
+
+                        <div class="challenge-hero">
+
+                            <div>
+
+                                <span>
+                                    MONEY MISSION
+                                </span>
+
+                                <h1>
+                                    Can you make it through the month?
+                                </h1>
+
+                                <p>
+                                    Manage a fictional monthly budget, make decisions and learn from what happens next.
+                                </p>
+
+                            </div>
+
+                            <div class="challenge-score">
+
+                                <span>
+                                    YOUR XP
+                                </span>
+
+                                <strong id="challengeXP">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mission-card">
+
+                            <div class="mission-top">
+
+                                <div>
+
+                                    <span>
+                                        MISSION 01
+                                    </span>
+
+                                    <h2 id="missionTitle">
+                                        Your first money decision
+                                    </h2>
+
+                                </div>
+
+                                <span class="mission-progress" id="missionProgress">
+                                    1 / 5
+                                </span>
+
+                            </div>
+
+
+                            <div class="mission-budget">
+
+                                <div>
+
+                                    <span>
+                                        Fictional income
+                                    </span>
+
+                                    <strong>
+                                        ₦120,000
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Remaining
+                                    </span>
+
+                                    <strong id="missionRemaining">
+                                        ₦120,000
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mission-question" id="missionQuestion">
+
+                                <span>
+                                    SCENARIO
+                                </span>
+
+                                <h3>
+                                    You receive your monthly income. Your rent and transport are due, but your friend invites you out. What do you do first?
+                                </h3>
+
+                            </div>
+
+
+                            <div class="mission-options" id="missionOptions">
+
+                                <button data-choice="needs" type="button">
+                                    <span>
+                                        A
+                                    </span>
+
+                                    Pay essential expenses first.
+                                </button>
+
+
+                                <button data-choice="wants" type="button">
+                                    <span>
+                                        B
+                                    </span>
+
+                                    Spend on the outing first.
+                                </button>
+
+
+                                <button data-choice="split" type="button">
+                                    <span>
+                                        C
+                                    </span>
+
+                                    Ignore the bills and decide later.
+                                </button>
+
+                            </div>
+
+
+                            <div class="mission-feedback" id="missionFeedback"></div>
+
+
+                            <button class="primary-action mission-next hidden" id="missionNext" type="button">
+                                Continue mission →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     INSIGHTS
+                ============================================== -->
+
+                <section class="app-section" id="section-insights">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <span>
+                                INSIGHTS
+                            </span>
+
+                            <h1>
+                                Notice patterns, not perfection.
+                            </h1>
+
+                            <p>
+                                Use your monthly numbers to understand what changed and what you might try next.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="insight-dashboard-grid">
+
+                        <article class="dashboard-card large-insight">
+
+                            <div class="card-heading">
+
+                                <div>
+
+                                    <span>
+                                        SPENDING
+                                    </span>
+
+                                    <h3>
+                                        Category breakdown
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="insight-category-chart" id="insightCategoryChart">
+
+                                <div class="chart-empty">
+                                    Add expenses to build your chart.
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="dashboard-card insight-advice-card">
+
+                            <div class="ai-avatar">
+                                AI
+                            </div>
+
+                            <span>
+                                BUDGETBEE OBSERVATION
+                            </span>
+
+                            <h3 id="insightBeeTitle">
+                                Your first insight is waiting.
+                            </h3>
+
+                            <p id="insightBeeText">
+                                Once you record some expenses, BudgetBee can help you spot the category taking the most space.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <article class="dashboard-card reflection-card">
+
+                        <div>
+
+                            <span>
+                                REFLECTION
+                            </span>
+
+                            <h3>
+                                What would you like to improve next month?
+                            </h3>
+
+                        </div>
+
+                        <div class="reflection-options">
+
+                            <button type="button">
+                                Spend less on wants
+                            </button>
+
+                            <button type="button">
+                                Save more consistently
+                            </button>
+
+                            <button type="button">
+                                Track expenses better
+                            </button>
+
+                            <button type="button">
+                                Understand my budget
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =============================================
+                     MONTHLY REVIEW
+                ============================================== -->
+
+                <section class="app-section" id="section-review">
+
+                    <div class="page-heading">
+
+                        <div>
+
+                            <span>
+                                MONTHLY REVIEW
+                            </span>
+
+                            <h1>
+                                What did this month teach you?
+                            </h1>
+
+                            <p>
+                                A review turns numbers into useful information for your next month.
+                            </p>
+
+                        </div>
+
+                        <button class="primary-action" id="newMonthButton" type="button">
+                            Start a new month →
+                        </button>
+
+                    </div>
+
+
+                    <div class="review-summary">
+
+                        <div class="review-number">
+
+                            <span>
+                                INCOME
+                            </span>
+
+                            <strong id="reviewIncome">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+                        <div class="review-number">
+
+                            <span>
+                                SPENT
+                            </span>
+
+                            <strong id="reviewSpent">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+                        <div class="review-number">
+
+                            <span>
+                                SAVED
+                            </span>
+
+                            <strong id="reviewSaved">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+                        <div class="review-number">
+
+                            <span>
+                                REMAINING
+                            </span>
+
+                            <strong id="reviewRemaining">
+                                ₦0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-grid">
+
+                        <article class="dashboard-card">
+
+                            <span>
+                                MONTH SUMMARY
+                            </span>
+
+                            <h3>
+                                Your biggest category
+                            </h3>
+
+                            <div class="review-highlight">
+
+                                <div class="review-highlight-icon" id="reviewCategoryIcon">
+                                    —
+                                </div>
+
+                                <div>
+
+                                    <strong id="reviewTopCategory">
+                                        No spending yet
+                                    </strong>
+
+                                    <span id="reviewTopCategoryAmount">
+                                        Add expenses to see your
+                                        biggest category.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="dashboard-card">
+
+                            <span>
+                                BUDGETBEE REFLECTION
+                            </span>
+
+                            <h3>
+                                One useful thing to remember
+                            </h3>
+
+                            <p class="review-bee-text" id="reviewBeeText">
+                                A month doesn't have to be perfect to teach you something useful.
+                            </p>
+
+                            <button class="bee-open-button" id="reviewBeeButton" type="button">
+                                Ask BudgetBee about this month →
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="new-month-card">
+
+                        <div>
+
+                            <span>
+                                NEXT MONTH
+                            </span>
+
+                            <h3>
+                                Ready to start fresh?
+                            </h3>
+
+                            <p>
+                                Starting a new month gives you a fresh workspace while keeping your profile, learning progress and goals.
+                            </p>
+
+                        </div>
+
+                        <button class="primary-action" id="newMonthButtonBottom" type="button">
+                            Start new month
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MONTH SWITCHER
+    ====================================================== -->
+
+    <div class="modal-backdrop" id="monthModal" aria-hidden="true">
+
+        <div class="small-modal">
+
+            <button class="modal-close" id="monthModalClose" type="button">
+                ×
+            </button>
+
+            <span>
+                MONTHLY WORKSPACE
+            </span>
+
+            <h2>
+                Choose your month
+            </h2>
+
+            <p>
+                Each month has its own income, expenses and plan.
+            </p>
+
+            <div class="month-list" id="monthList"></div>
+
+            <button class="primary-action full-width" id="createNextMonth" type="button">
+                + Create next month
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         EXPENSE MODAL
+    ====================================================== -->
+
+    <div class="modal-backdrop" id="expenseModal" aria-hidden="true">
+
+        <div class="small-modal">
+
+            <button class="modal-close" data-close-modal="expenseModal" type="button">
+                ×
+            </button>
+
+            <span>
+                SPENDING
+            </span>
+
+            <h2>
+                Add an expense
+            </h2>
+
+            <p>
+                Record what you spent so your month becomes easier to understand.
+            </p>
+
+
+            <form id="expenseForm" class="modal-form">
+
+                <label>
+
+                    Description
+
+                    <input
+                        id="expenseDescription"
+                        type="text"
+                        placeholder="e.g. Lunch"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Amount
+
+                    <div class="currency-input">
+
+                        <span>
+                            ₦
+                        </span>
+
+                        <input
+                            id="expenseAmount"
+                            type="number"
+                            min="0"
+                            step="10"
+                            placeholder="0"
+                            required
+                        >
+
+                    </div>
+
+                </label>
+
+
+                <label>
+
+                    Category
+
+                    <select
+                        id="expenseCategory"
+                        required
+                    >
+
+                        <option value="">
+                            Choose a category
+                        </option>
+
+                        <option value="needs">
+                            Needs
+                        </option>
+
+                        <option value="wants">
+                            Wants
+                        </option>
+
+                        <option value="savings">
+                            Savings
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Date
+
+                    <input
+                        id="expenseDate"
+                        type="date"
+                        required
+                    >
+
+                </label>
+
+
+                <button class="primary-action full-width" type="submit">
+                    Add expense
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         INCOME MODAL
+    ====================================================== -->
+
+    <div class="modal-backdrop" id="incomeModal" aria-hidden="true">
+
+        <div class="small-modal">
+
+            <button class="modal-close" data-close-modal="incomeModal" type="button">
+                ×
+            </button>
+
+            <span>
+                MONTHLY INCOME
+            </span>
+
+            <h2>
+                Add your income
+            </h2>
+
+            <p>
+                This number helps BudgetBasics create your planning framework.
+            </p>
+
+
+            <form id="incomeForm" class="modal-form">
+
+                <label>
+
+                    Monthly income
+
+                    <div class="currency-input">
+
+                        <span>
+                            ₦
+                        </span>
+
+                        <input
+                            id="modalIncomeAmount"
+                            type="number"
+                            min="0"
+                            step="100"
+                            placeholder="0"
+                            required
+                        >
+
+                    </div>
+
+                </label>
+
+
+                <button class="primary-action full-width" type="submit">
+                    Save income
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         GOAL MODAL
+    ====================================================== -->
+
+    <div class="modal-backdrop" id="goalModal" aria-hidden="true">
+
+        <div class="small-modal">
+
+            <button class="modal-close" data-close-modal="goalModal" type="button">
+                ×
+            </button>
+
+            <span>
+                SAVINGS GOAL
+            </span>
+
+            <h2>
+                Create a goal
+            </h2>
+
+            <p>
+                Give your savings a name and a target.
+            </p>
+
+
+            <form id="goalForm" class="modal-form">
+
+                <label>
+
+                    Goal name
+
+                    <input
+                        id="goalName"
+                        type="text"
+                        placeholder="e.g. New laptop"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Target amount
+
+                    <div class="currency-input">
+
+                        <span>
+                            ₦
+                        </span>
+
+                        <input
+                            id="goalTarget"
+                            type="number"
+                            min="1"
+                            step="100"
+                            placeholder="200000"
+                            required
+                        >
+
+                    </div>
+
+                </label>
+
+
+                <label>
+
+                    Current savings
+
+                    <div class="currency-input">
+
+                        <span>
+                            ₦
+                        </span>
+
+                        <input
+                            id="goalCurrent"
+                            type="number"
+                            min="0"
+                            step="100"
+                            value="0"
+                        >
+
+                    </div>
+
+                </label>
+
+
+                <label>
+
+                    Monthly contribution
+
+                    <div class="currency-input">
+
+                        <span>
+                            ₦
+                        </span>
+
+                        <input
+                            id="goalMonthly"
+                            type="number"
+                            min="0"
+                            step="100"
+                            placeholder="20000"
+                            required
+                        >
+
+                    </div>
+
+                </label>
+
+
+                <button class="primary-action full-width" type="submit">
+                    Create goal
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LEARNING MODAL
+    ====================================================== -->
+
+    <div class="modal-backdrop" id="lessonModal" aria-hidden="true">
+
+        <div class="lesson-modal">
+
+            <button class="modal-close" data-close-modal="lessonModal" type="button">
+                ×
+            </button>
+
+
+            <div class="lesson-modal-top">
+
+                <span id="lessonModalTag">
+                    LESSON
+                </span>
+
+                <span id="lessonModalTime">
+                    5 min
+                </span>
+
+            </div>
+
+
+            <div class="lesson-modal-icon" id="lessonModalIcon">
+                ✦
+            </div>
+
+
+            <h2 id="lessonModalTitle">
+                Budgeting basics
+            </h2>
+
+
+            <p id="lessonModalBody">
+                A budget is a plan for how you intend to use your money during a period.
+            </p>
+
+
+            <div class="lesson-question" id="lessonQuestion">
+
+                <span>
+                    CHECK YOUR UNDERSTANDING
+                </span>
+
+                <h3 id="lessonQuestionText">
+                    What should you know before building a budget?
+                </h3>
+
+
+                <div id="lessonAnswers">
+
+                    <button type="button">
+                        Your income and expected expenses
+                    </button>
+
+                    <button type="button">
+                        Only what you want to buy
+                    </button>
+
+                    <button type="button">
+                        Nothing — just start spending
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="lesson-result" id="lessonResult"></div>
+
+
+            <button class="primary-action full-width hidden" id="lessonDoneButton" type="button">
+                Complete lesson
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SEARCH MODAL
+    ====================================================== -->
+
+    <div class="modal-backdrop" id="searchModal" aria-hidden="true">
+
+        <div class="search-modal">
+
+            <button class="modal-close" data-close-modal="searchModal" type="button">
+                ×
+            </button>
+
+
+            <span>
+                SEARCH BUDGETBASICS
+            </span>
+
+            <h2>
+                What are you looking for?
+            </h2>
+
+
+            <div class="search-input-wrapper">
+
+                <span>
+                    ⌕
+                </span>
+
+                <input id="globalSearchInput" type="search" placeholder="Try “savings”, “needs”, “budget”..." autocomplete="off">
+
+            </div>
+
+
+            <div class="search-results" id="searchResults">
+
+                <div class="search-empty">
+                    Start typing to search your workspace.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BUDGETBEE PANEL
+    ====================================================== -->
+
+    <aside class="bee-panel" id="beePanel" aria-hidden="true">
+
+        <div class="bee-panel-header">
+
+            <div>
+
+                <div class="ai-avatar large">
+                    AI
+                </div>
+
+                <div>
+
+                    <span>
+                        BUDGETBEE
+                    </span>
+
+                    <strong>
+                        Your money guide
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button id="beeClose" type="button" aria-label="Close BudgetBee">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="bee-chat" id="beeChat">
+
+            <div class="bee-message bubble">
+
+                Hi! I'm BudgetBee.
+
+                <br><br> Ask me about budgeting, savings goals, needs vs wants, spending or how to use BudgetBasics.
+
+            </div>
+
+        </div>
+
+
+        <div class="bee-suggestions">
+
+            <button type="button">
+                How do I budget?
+            </button>
+
+            <button type="button">
+                What is 50/30/20?
+            </button>
+
+            <button type="button">
+                How can I save?
+            </button>
+
+            <button type="button">
+                Where do I add expenses?
+            </button>
+
+        </div>
+
+
+        <form class="bee-input" id="beeForm">
+
+            <input id="beeInput" type="text" placeholder="Ask BudgetBee..." autocomplete="off">
+
+            <button type="submit" aria-label="Send message">
+                ↑
+            </button>
+
+        </form>
+
+
+        <div class="bee-disclaimer">
+
+            Educational guidance only. BudgetBee does not provide personalized financial advice.
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         BEE FLOATING BUTTON
+    ====================================================== -->
+
+    <button class="bee-floating-button" id="beeFloatingButton" type="button" aria-label="Open BudgetBee">
+
+        <span class="ai-avatar large">
+            AI
+        </span>
+
+        <span class="bee-pulse"></span>
+
+    </button>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div class="app-toast" id="appToast" role="status" aria-live="polite">
+
+        <span>
+            ✓
+        </span>
+
+        <p id="appToastText">
+            Saved
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROFILE MENU
+    ====================================================== -->
+
+    <div class="profile-menu" id="profileMenu">
+
+        <div class="profile-menu-header">
+
+            <span class="profile-avatar large" id="profileMenuAvatar">
+                V
+            </span>
+
+            <div>
+
+                <strong id="profileMenuName">
+                    User
+                </strong>
+
+                <span id="profileMenuEmail">
+                    user@example.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-menu-divider"></div>
+
+
+        <button id="profileSettingsButton" type="button">
+            Profile & preferences
+        </button>
+
+
+        <button id="logoutButton" type="button">
+            Log out
+        </button>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

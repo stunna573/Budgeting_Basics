@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="BudgetBasics helps students and young adults understand money, build budgets, set savings goals, and make better everyday financial decisions.">
+
+    <meta name="theme-color" content="#FFF9F0">
+
+    <title>BudgetBasics — Make Your Money Make Sense</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-logo">
+            <div class="logo-mark small">
+                <span class="logo-coin coin-one"></span>
+                <span class="logo-coin coin-two"></span>
+                <span class="logo-coin coin-three"></span>
+                <span class="logo-line"></span>
+            </div>
+
+            <span>BudgetBasics</span>
+        </div>
+
+        <div class="loader-bar">
+            <span></span>
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         SITE HEADER
+    ====================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container nav-container">
+
+            <!-- LOGO -->
+
+            <a href="#top" class="brand" aria-label="BudgetBasics home">
+
+                <div class="logo-mark">
+
+                    <span class="logo-coin coin-one"></span>
+
+                    <span class="logo-coin coin-two"></span>
+
+                    <span class="logo-coin coin-three"></span>
+
+                    <span class="logo-line"></span>
+
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>BudgetBasics</strong>
+
+                    <span>Make money make sense.</span>
+
+                </div>
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+
+                <a href="#why">Why BudgetBasics</a>
+
+                <a href="#how">How it works</a>
+
+                <a href="#features">Features</a>
+
+                <a href="#learn">Learn</a>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+                <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+                    <span class="theme-icon sun-icon">☼</span>
+                    <span class="theme-icon moon-icon">☾</span>
+                </button>
+
+                <button class="text-button" type="button" data-open-auth="signin">
+                    Sign in
+                </button>
+
+                <button class="button button-primary button-small" type="button" data-open-auth="signup">
+                    Get started
+                </button>
+
+                <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <div class="mobile-nav" id="mobileNav">
+
+            <a href="#why">Why BudgetBasics</a>
+
+            <a href="#how">How it works</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#learn">Learn</a>
+
+            <div class="mobile-nav-divider"></div>
+
+            <button type="button" data-open-auth="signin">
+                Sign in
+            </button>
+
+            <button type="button" class="mobile-start-button" data-open-auth="signup">
+                Get started
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main id="top">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero-section">
+
+            <div class="hero-background-shape shape-one"></div>
+
+            <div class="hero-background-shape shape-two"></div>
+
+            <div class="container hero-grid">
+
+
+                <!-- HERO COPY -->
+
+                <div class="hero-content reveal">
+
+                    <div class="eyebrow">
+
+                        <span class="eyebrow-dot"></span> Financial confidence for real life
+
+                    </div>
+
+
+                    <h1>
+
+                        Your money is easier
+
+                        <span class="hero-highlight">
+                            when you can see it.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        BudgetBasics gives you a simple place to learn about money, plan your month, track spending, build savings goals, and understand the decisions behind your numbers.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <button class="button button-primary button-large" type="button" data-open-auth="signup">
+
+                            Create your free space
+
+                            <span class="button-arrow">→</span>
+
+                        </button>
+
+
+                        <a href="#how" class="button button-secondary button-large">
+
+                            See how it works
+
+                            <span class="play-icon">▶</span>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-trust">
+
+                        <div class="trust-avatars">
+
+                            <span>J</span>
+
+                            <span>M</span>
+
+                            <span>A</span>
+
+                            <span>S</span>
+
+                        </div>
+
+                        <div>
+
+                            <strong>Built for everyday decisions.</strong>
+
+                            <span>
+                                Learn first. Plan clearly. Improve gradually.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO PRODUCT PREVIEW -->
+
+                <div class="hero-visual reveal reveal-delay">
+
+                    <div class="hero-glow"></div>
+
+
+                    <div class="dashboard-preview">
+
+                        <div class="preview-topbar">
+
+                            <div class="preview-brand">
+
+                                <div class="mini-logo">
+                                    B
+                                </div>
+
+                                <span>My money</span>
+
+                            </div>
+
+                            <div class="preview-top-icons">
+
+                                <span></span>
+
+                                <span></span>
+
+                                <div class="preview-avatar">
+                                    V
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="preview-body">
+
+                            <div class="preview-heading">
+
+                                <div>
+
+                                    <small>September 2026</small>
+
+                                    <h3>
+                                        Good morning, Valentine
+                                    </h3>
+
+                                </div>
+
+                                <span class="preview-status">
+                                    On track
+                                </span>
+
+                            </div>
+
+
+                            <div class="preview-money-grid">
+
+                                <div class="preview-money-card">
+
+                                    <span>Income</span>
+
+                                    <strong>₦180,000</strong>
+
+                                    <small class="positive">
+                                        + this month
+                                    </small>
+
+                                </div>
+
+
+                                <div class="preview-money-card">
+
+                                    <span>Spent</span>
+
+                                    <strong>₦76,500</strong>
+
+                                    <small>
+                                        42.5% of income
+                                    </small>
+
+                                </div>
+
+
+                                <div class="preview-money-card">
+
+                                    <span>Saved</span>
+
+                                    <strong>₦45,000</strong>
+
+                                    <small class="positive">
+                                        25% goal
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="preview-main-card">
+
+                                <div class="preview-card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            Monthly plan
+                                        </span>
+
+                                        <strong>
+                                            ₦180,000
+                                        </strong>
+
+                                    </div>
+
+                                    <span class="preview-menu">
+                                        •••
+                                    </span>
+
+                                </div>
+
+
+                                <div class="preview-bars">
+
+                                    <div class="preview-bar-row">
+
+                                        <div class="preview-bar-label">
+
+                                            <span>
+                                                Needs
+                                            </span>
+
+                                            <strong>
+                                                ₦92k
+                                            </strong>
+
+                                        </div>
+
+                                        <div class="preview-bar-track">
+                                            <span style="width: 76%;" class="bar-needs"></span>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="preview-bar-row">
+
+                                        <div class="preview-bar-label">
+
+                                            <span>
+                                                Wants
+                                            </span>
+
+                                            <strong>
+                                                ₦43k
+                                            </strong>
+
+                                        </div>
+
+                                        <div class="preview-bar-track">
+                                            <span style="width: 45%;" class="bar-wants"></span>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="preview-bar-row">
+
+                                        <div class="preview-bar-label">
+
+                                            <span>
+                                                Savings
+                                            </span>
+
+                                            <strong>
+                                                ₦45k
+                                            </strong>
+
+                                        </div>
+
+                                        <div class="preview-bar-track">
+                                            <span style="width: 55%;" class="bar-savings"></span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="preview-bottom-grid">
+
+                                <div class="preview-goal-card">
+
+                                    <div class="preview-goal-icon">
+                                        ↗
+                                    </div>
+
+                                    <div>
+
+                                        <small>
+                                            Savings goal
+                                        </small>
+
+                                        <strong>
+                                            New laptop
+                                        </strong>
+
+                                        <div class="goal-progress">
+
+                                            <span style="width: 64%;"></span>
+
+                                        </div>
+
+                                        <small>
+                                            ₦128k of ₦200k
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="preview-tip-card">
+
+                                    <span>
+                                        ✦ BudgetBee
+                                    </span>
+
+                                    <strong>
+                                        Try reviewing your wants
+                                        before your next purchase.
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-card-one">
+
+                        <div class="floating-icon mint">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Goal progress
+                            </strong>
+
+                            <span>
+                                +₦15,000 this month
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-card-two">
+
+                        <div class="floating-icon yellow">
+                            ₦
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Spending insight
+                            </strong>
+
+                            <span>
+                                Food is your top category
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="container hero-bottom-note">
+
+                <div class="scroll-indicator">
+
+                    <span></span>
+
+                </div>
+
+                <p>
+                    Scroll to explore a clearer way to understand your money.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WHY SECTION
+        ================================================== -->
+
+        <section class="section why-section" id="why">
+
+            <div class="container">
+
+                <div class="section-heading centered reveal">
+
+                    <div class="eyebrow">
+
+                        <span class="eyebrow-dot"></span> Why BudgetBasics?
+
+                    </div>
+
+                    <h2>
+                        Money gets easier when
+                        <span>the picture is clear.</span>
+                    </h2>
+
+                    <p>
+                        Most people don't need another complicated financial dashboard. They need a simple way to understand what their money is doing and what they can do next.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-grid">
+
+                    <article class="problem-card reveal">
+
+                        <div class="problem-number">
+                            01
+                        </div>
+
+                        <div class="problem-icon coral-icon">
+                            ?
+                        </div>
+
+                        <h3>
+                            “Where did my money go?”
+                        </h3>
+
+                        <p>
+                            Turn scattered spending into a simple monthly picture you can actually understand.
+                        </p>
+
+                        <span class="problem-link">
+                            See your spending →
+                        </span>
+
+                    </article>
+
+
+                    <article class="problem-card featured reveal reveal-delay">
+
+                        <div class="problem-number">
+                            02
+                        </div>
+
+                        <div class="problem-icon blue-icon">
+                            %
+                        </div>
+
+                        <h3>
+                            “How much should I spend?”
+                        </h3>
+
+                        <p>
+                            Learn practical budgeting ideas like 50/30/20 and apply them to your own numbers.
+                        </p>
+
+                        <span class="problem-link">
+                            Build a plan →
+                        </span>
+
+                    </article>
+
+
+                    <article class="problem-card reveal reveal-delay-two">
+
+                        <div class="problem-number">
+                            03
+                        </div>
+
+                        <div class="problem-icon mint-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            “How do I reach my goal?”
+                        </h3>
+
+                        <p>
+                            Turn a vague savings wish into a target, timeline, contribution plan, and progress.
+                        </p>
+
+                        <span class="problem-link">
+                            Set a goal →
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+        <section class="section how-section" id="how">
+
+            <div class="container">
+
+                <div class="how-grid">
+
+
+                    <div class="how-copy reveal">
+
+                        <div class="eyebrow">
+
+                            <span class="eyebrow-dot"></span> A better starting point
+
+                        </div>
+
+                        <h2>
+                            Don't just track money.
+                            <span>understand it.</span>
+                        </h2>
+
+                        <p>
+                            BudgetBasics combines learning and planning so that every number has a reason behind it.
+                        </p>
+
+
+                        <div class="how-list">
+
+                            <div class="how-item active">
+
+                                <div class="how-number">
+                                    01
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Learn your money basics
+                                    </strong>
+
+                                    <p>
+                                        Understand income, expenses, needs, wants and savings.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="how-item">
+
+                                <div class="how-number">
+                                    02
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Build your monthly plan
+                                    </strong>
+
+                                    <p>
+                                        Give your income a purpose before your spending gets ahead of you.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="how-item">
+
+                                <div class="how-number">
+                                    03
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Make better decisions
+                                    </strong>
+
+                                    <p>
+                                        Review patterns, practice scenarios and improve one decision at a time.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="how-visual reveal reveal-delay">
+
+                        <div class="learning-board">
+
+                            <div class="board-header">
+
+                                <div>
+
+                                    <small>
+                                        YOUR FINANCIAL JOURNEY
+                                    </small>
+
+                                    <h3>
+                                        Small steps.
+                                        <br> Better habits.
+                                    </h3>
+
+                                </div>
+
+                                <div class="board-star">
+                                    ✦
+                                </div>
+
+                            </div>
+
+
+                            <div class="journey-line">
+
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="journey-step completed">
+
+                                <div class="journey-icon">
+                                    ✓
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Understand
+                                    </strong>
+
+                                    <span>
+                                        Learn the basics
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="journey-step current">
+
+                                <div class="journey-icon">
+                                    2
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Plan
+                                    </strong>
+
+                                    <span>
+                                        Build your monthly budget
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="journey-step">
+
+                                <div class="journey-icon">
+                                    3
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Practice
+                                    </strong>
+
+                                    <span>
+                                        Test everyday money decisions
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="journey-step">
+
+                                <div class="journey-icon">
+                                    4
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Grow
+                                    </strong>
+
+                                    <span>
+                                        Track goals and reflect
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="board-footer">
+
+                                <span>
+                                    Your progress belongs to you.
+                                </span>
+
+                                <div class="board-progress">
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEATURES
+        ================================================== -->
+
+        <section class="section features-section" id="features">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="eyebrow">
+
+                        <span class="eyebrow-dot"></span> Everything in one place
+
+                    </div>
+
+                    <h2>
+                        One space for
+                        <span>learning and doing.</span>
+                    </h2>
+
+                    <p>
+                        Instead of giving you a pile of financial tools, BudgetBasics connects the pieces into one clear experience.
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+
+                    <article class="feature-card feature-large blue-card reveal">
+
+                        <div class="feature-card-top">
+
+                            <span class="feature-label">
+                                PLAN
+                            </span>
+
+                            <span class="feature-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="feature-icon">
+                            ≋
+                        </div>
+
+                        <h3>
+                            Your monthly money plan
+                        </h3>
+
+                        <p>
+                            See income, spending, savings and remaining money together instead of guessing from separate notes.
+                        </p>
+
+
+                        <div class="feature-mini-dashboard">
+
+                            <div class="mini-stat">
+
+                                <span>
+                                    Income
+                                </span>
+
+                                <strong>
+                                    ₦180k
+                                </strong>
+
+                            </div>
+
+                            <div class="mini-stat">
+
+                                <span>
+                                    Planned
+                                </span>
+
+                                <strong>
+                                    ₦135k
+                                </strong>
+
+                            </div>
+
+                            <div class="mini-stat">
+
+                                <span>
+                                    Left
+                                </span>
+
+                                <strong class="green-text">
+                                    ₦45k
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="feature-card yellow-card reveal reveal-delay">
+
+                        <div class="feature-card-top">
+
+                            <span class="feature-label">
+                                LEARN
+                            </span>
+
+                            <span class="feature-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="feature-icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            Financial learning
+                        </h3>
+
+                        <p>
+                            Short lessons, examples and questions that help you understand the decisions behind your budget.
+                        </p>
+
+
+                        <div class="lesson-preview">
+
+                            <span class="lesson-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Needs vs wants
+                                </strong>
+
+                                <span>
+                                    4 min lesson
+                                </span>
+
+                            </div>
+
+                            <span class="lesson-check">
+                                ✓
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="feature-card mint-card reveal">
+
+                        <div class="feature-card-top">
+
+                            <span class="feature-label">
+                                SAVE
+                            </span>
+
+                            <span class="feature-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="feature-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            Savings goals
+                        </h3>
+
+                        <p>
+                            Set a target, see what remains and understand how your monthly contribution moves you forward.
+                        </p>
+
+
+                        <div class="savings-preview">
+
+                            <div class="savings-circle">
+
+                                <span>
+                                    64%
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New laptop
+                                </strong>
+
+                                <span>
+                                    ₦128,000 / ₦200,000
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="feature-card lavender-card reveal reveal-delay">
+
+                        <div class="feature-card-top">
+
+                            <span class="feature-label">
+                                PRACTICE
+                            </span>
+
+                            <span class="feature-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="feature-icon">
+                            ◎
+                        </div>
+
+                        <h3>
+                            Money Mission
+                        </h3>
+
+                        <p>
+                            Face realistic money scenarios and see how everyday choices affect your fictional budget.
+                        </p>
+
+
+                        <div class="game-preview">
+
+                            <span class="game-badge">
+                                LEVEL 04
+                            </span>
+
+                            <div class="game-stars">
+                                ★ ★ ★
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="feature-card coral-card reveal">
+
+                        <div class="feature-card-top">
+
+                            <span class="feature-label">
+                                REFLECT
+                            </span>
+
+                            <span class="feature-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="feature-icon">
+                            ◌
+                        </div>
+
+                        <h3>
+                            Monthly insights
+                        </h3>
+
+                        <p>
+                            Look back at your month, notice patterns and choose one useful improvement for the next one.
+                        </p>
+
+
+                        <div class="insight-preview">
+
+                            <div class="insight-bars">
+
+                                <span style="height: 45%;"></span>
+
+                                <span style="height: 65%;"></span>
+
+                                <span style="height: 52%;"></span>
+
+                                <span style="height: 78%;"></span>
+
+                                <span style="height: 60%;"></span>
+
+                            </div>
+
+                            <span>
+                                Spending trend
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEARNING SECTION
+        ================================================== -->
+
+        <section class="section learning-section" id="learn">
+
+            <div class="container">
+
+                <div class="learning-feature-grid">
+
+
+                    <div class="learning-screen reveal">
+
+                        <div class="screen-top">
+
+                            <div class="screen-dots">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                            <span>
+                                Learn / Budgeting Basics
+                            </span>
+
+                        </div>
+
+
+                        <div class="screen-content">
+
+                            <div class="lesson-progress">
+
+                                <span>
+                                    LESSON 2 OF 6
+                                </span>
+
+                                <div>
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+
+                            <h3>
+                                What should a budget actually do?
+                            </h3>
+
+
+                            <p>
+                                A budget is not about stopping yourself from spending. It helps you decide what your money should do before you spend it.
+                            </p>
+
+
+                            <div class="answer-options">
+
+                                <button type="button" class="answer-option">
+
+                                    <span class="answer-letter">
+                                        A
+                                    </span>
+
+                                    <span>
+                                        Tell me that I cannot spend money.
+                                    </span>
+
+                                </button>
+
+
+                                <button type="button" class="answer-option correct">
+
+                                    <span class="answer-letter">
+                                        B
+                                    </span>
+
+                                    <span>
+                                        Help me plan what matters to me.
+                                    </span>
+
+                                    <span class="answer-result">
+                                        ✓
+                                    </span>
+
+                                </button>
+
+
+                                <button type="button" class="answer-option">
+
+                                    <span class="answer-letter">
+                                        C
+                                    </span>
+
+                                    <span>
+                                        Make every month exactly the same.
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="lesson-footer">
+
+                                <span>
+                                    ✓ Answer explained
+                                </span>
+
+                                <button type="button">
+                                    Continue →
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-copy reveal reveal-delay">
+
+                        <div class="eyebrow">
+
+                            <span class="eyebrow-dot"></span> Learn by doing
+
+                        </div>
+
+                        <h2>
+                            Financial education that
+                            <span>doesn't feel like homework.</span>
+                        </h2>
+
+                        <p>
+                            Learn one idea, see a real example, answer a question, then use what you learned in your own plan.
+                        </p>
+
+
+                        <div class="learning-benefits">
+
+                            <div>
+
+                                <span class="benefit-icon">
+                                    ✓
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Short, focused lessons
+                                    </strong>
+
+                                    <p>
+                                        Learn one concept at a time.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div>
+
+                                <span class="benefit-icon">
+                                    ✓
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Real-life examples
+                                    </strong>
+
+                                    <p>
+                                        Connect concepts to everyday choices.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div>
+
+                                <span class="benefit-icon">
+                                    ✓
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Practice immediately
+                                    </strong>
+
+                                    <p>
+                                        Turn knowledge into a decision.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="text-link-button" type="button" data-open-auth="signup">
+                            Start learning
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             50 / 30 / 20
+        ================================================== -->
+
+        <section class="section rule-section">
+
+            <div class="container">
+
+                <div class="rule-card reveal">
+
+                    <div class="rule-copy">
+
+                        <div class="eyebrow light-eyebrow">
+
+                            <span class="eyebrow-dot"></span> A starting framework
+
+                        </div>
+
+                        <h2>
+                            Give every part of your income a job.
+                        </h2>
+
+                        <p>
+                            BudgetBasics helps you explore the 50/30/20 framework as an educational starting point, then compare it with your real spending.
+                        </p>
+
+                        <button class="button button-white" type="button" data-open-auth="signup">
+                            Try the calculator →
+                        </button>
+
+                    </div>
+
+
+                    <div class="rule-visual">
+
+                        <div class="rule-donut">
+
+                            <div class="donut-center">
+
+                                <strong>
+                                    100%
+                                </strong>
+
+                                <span>
+                                    planned
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="rule-labels">
+
+                            <div>
+
+                                <span class="rule-dot needs"></span>
+
+                                <div>
+                                    <strong>50%</strong>
+                                    <span>Needs</span>
+                                </div>
+
+                            </div>
+
+
+                            <div>
+
+                                <span class="rule-dot wants"></span>
+
+                                <div>
+                                    <strong>30%</strong>
+                                    <span>Wants</span>
+                                </div>
+
+                            </div>
+
+
+                            <div>
+
+                                <span class="rule-dot save"></span>
+
+                                <div>
+                                    <strong>20%</strong>
+                                    <span>Savings</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="educational-note">
+                    BudgetBasics provides educational tools, not financial advice. The 50/30/20 rule is a framework and may not fit every person's circumstances.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TRUST
+        ================================================== -->
+
+        <section class="section trust-section">
+
+            <div class="container">
+
+                <div class="trust-grid">
+
+                    <div class="trust-copy reveal">
+
+                        <div class="eyebrow">
+
+                            <span class="eyebrow-dot"></span> Built with clarity in mind
+
+                        </div>
+
+                        <h2>
+                            Your money is personal.
+                            <span>Your learning space should be too.</span>
+                        </h2>
+
+                        <p>
+                            BudgetBasics is designed as an educational workspace. It doesn't connect to your bank, move money, or pretend to replace a financial professional.
+                        </p>
+
+                    </div>
+
+
+                    <div class="trust-items reveal reveal-delay">
+
+                        <div class="trust-item">
+
+                            <div class="trust-item-icon">
+                                ⌂
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Your own workspace
+                                </strong>
+
+                                <p>
+                                    Keep your planning experience organized around your profile.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="trust-item">
+
+                            <div class="trust-item-icon">
+                                ◈
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Educational by design
+                                </strong>
+
+                                <p>
+                                    Learn concepts and practice decisions instead of blindly following numbers.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="trust-item">
+
+                            <div class="trust-item-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Transparent AI
+                                </strong>
+
+                                <p>
+                                    BudgetBee is designed to guide you around the platform and explain topics.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="section final-cta-section">
+
+            <div class="container">
+
+                <div class="final-cta reveal">
+
+                    <div class="cta-decoration decoration-one">
+                        +
+                    </div>
+
+                    <div class="cta-decoration decoration-two">
+                        $
+                    </div>
+
+                    <div class="cta-decoration decoration-three">
+                        %
+                    </div>
+
+
+                    <div class="eyebrow light-eyebrow">
+
+                        <span class="eyebrow-dot"></span> Your next step starts here
+
+                    </div>
+
+
+                    <h2>
+                        Stop wondering where your money went.
+                    </h2>
+
+
+                    <p>
+                        Start building a clearer relationship with your money — one decision at a time.
+                    </p>
+
+
+                    <button class="button button-white button-large" type="button" data-open-auth="signup">
+                        Create my BudgetBasics space
+                        <span>→</span>
+                    </button>
+
+
+                    <small>
+                        Free educational experience · No bank connection
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+
+                <div class="footer-brand">
+
+                    <a href="#top" class="brand">
+
+                        <div class="logo-mark">
+
+                            <span class="logo-coin coin-one"></span>
+
+                            <span class="logo-coin coin-two"></span>
+
+                            <span class="logo-coin coin-three"></span>
+
+                            <span class="logo-line"></span>
+
+                        </div>
+
+                        <div class="brand-text">
+
+                            <strong>BudgetBasics</strong>
+
+                            <span>
+                                Make money make sense.
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    <p>
+                        A student-friendly financial learning and budgeting experience.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Explore
+                    </h4>
+
+                    <a href="#why">Why BudgetBasics</a>
+
+                    <a href="#how">How it works</a>
+
+                    <a href="#features">Features</a>
+
+                    <a href="#learn">Learning</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Product
+                    </h4>
+
+                    <a href="#" data-open-auth="signup">
+                        Create account
+                    </a>
+
+                    <a href="#" data-open-auth="signin">
+                        Sign in
+                    </a>
+
+                    <a href="#features">
+                        Budget planner
+                    </a>
+
+                    <a href="#features">
+                        Savings goals
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Principles
+                    </h4>
+
+                    <a href="#why">
+                        Learn first
+                    </a>
+
+                    <a href="#how">
+                        Plan clearly
+                    </a>
+
+                    <a href="#features">
+                        Practice
+                    </a>
+
+                    <a href="#top">
+                        Improve gradually
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="footerYear"></span> BudgetBasics. Built for learning.
+                </span>
+
+                <div class="footer-bottom-links">
+
+                    <span>
+                        Educational only
+                    </span>
+
+                    <span>
+                        •
+                    </span>
+
+                    <span>
+                        No bank connection
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         AUTH MODAL
+    ====================================================== -->
+
+    <div class="modal-backdrop" id="authModal" aria-hidden="true">
+
+        <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+
+            <button class="modal-close" id="authClose" type="button" aria-label="Close">
+                ×
+            </button>
+
+
+            <div class="auth-modal-header">
+
+                <div class="auth-logo">
+
+                    <div class="logo-mark">
+
+                        <span class="logo-coin coin-one"></span>
+                        <span class="logo-coin coin-two"></span>
+                        <span class="logo-coin coin-three"></span>
+                        <span class="logo-line"></span>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span class="auth-kicker">
+                        BudgetBasics
+                    </span>
+
+                    <h2 id="authTitle">
+                        Create your money space
+                    </h2>
+
+                    <p id="authSubtitle">
+                        Start with a few simple details.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIGN UP -->
+
+            <form id="signUpForm" class="auth-form" novalidate>
+
+                <div class="form-field">
+
+                    <label for="signUpName">
+                        Your name
+                    </label>
+
+                    <input id="signUpName" type="text" placeholder="e.g. Chikamso" autocomplete="name" required>
+
+                    <small class="field-error"></small>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="signUpEmail">
+                        Email address
+                    </label>
+
+                    <input id="signUpEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+                    <small class="field-error"></small>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="signUpPassword">
+                        Password
+                    </label>
+
+                    <input id="signUpPassword" type="password" placeholder="Create a password" autocomplete="new-password" minlength="6" required>
+
+                    <small class="field-error"></small>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="signUpConfirm">
+                        Confirm password
+                    </label>
+
+                    <input id="signUpConfirm" type="password" placeholder="Enter password again" autocomplete="new-password" minlength="6" required>
+
+                    <small class="field-error"></small>
+
+                </div>
+
+
+                <label class="checkbox-row">
+
+                    <input
+                        type="checkbox"
+                        id="signupAgreement"
+                        required
+                    >
+
+                    <span>
+                        I understand this is an educational budgeting
+                        experience, not a banking or financial-advice service.
+                    </span>
+
+                </label>
+
+
+                <button class="button button-primary auth-submit" type="submit">
+                    Create account
+                    <span>→</span>
+                </button>
+
+
+                <p class="auth-switch">
+
+                    Already have an account?
+
+                    <button type="button" data-switch-auth="signin">
+                        Sign in
+                    </button>
+
+                </p>
+
+            </form>
+
+
+            <!-- SIGN IN -->
+
+            <form id="signInForm" class="auth-form hidden" novalidate>
+
+                <div class="form-field">
+
+                    <label for="signInEmail">
+                        Email address
+                    </label>
+
+                    <input id="signInEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+                    <small class="field-error"></small>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="signInPassword">
+                        Password
+                    </label>
+
+                    <input id="signInPassword" type="password" placeholder="Your password" autocomplete="current-password" required>
+
+                    <small class="field-error"></small>
+
+                </div>
+
+
+                <div class="auth-message" id="signInMessage"></div>
+
+
+                <button class="button button-primary auth-submit" type="submit">
+                    Sign in
+                    <span>→</span>
+                </button>
+
+
+                <p class="auth-switch">
+
+                    New to BudgetBasics?
+
+                    <button type="button" data-switch-auth="signup">
+                        Create an account
+                    </button>
+
+                </p>
+
+            </form>
+
+
+            <div class="demo-notice">
+
+                <span>i</span>
+
+                <p>
+                    Demo account data is stored locally in your browser. This project does not connect to a bank or payment service.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+
+        <span class="toast-icon">
+            ✓
+        </span>
+
+        <span id="toastMessage">
+            Done
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
